@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+		"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>unit-test-env.ts</title>
+</head>
+<body style="color: rgb(20, 20, 20); background-color: rgb(247, 247, 247)">
+<pre><code>
+<span style="color: rgb(56, 79, 244);">const</span><span style="color: rgb(20, 20, 20);">&nbsp;</span><span style="color: rgb(20, 20, 20);">environmentVariables</span><span style="color: rgb(20, 20, 20);">&nbsp;=&nbsp;{
+&nbsp;&nbsp;</span><span style="color: rgb(150, 122, 178);">//&nbsp;setting&nbsp;commit&nbsp;information&nbsp;so&nbsp;that&nbsp;tests&nbsp;don't&nbsp;need&nbsp;to&nbsp;rely&nbsp;on&nbsp;global&nbsp;config
+</span><span style="color: rgb(20, 20, 20);">&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">GIT_AUTHOR_NAME</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">'Joe&nbsp;Bloggs'</span><span style="color: rgb(20, 20, 20);">,
+&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">GIT_AUTHOR_EMAIL</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">'joe.bloggs@somewhere.com'</span><span style="color: rgb(20, 20, 20);">,
+&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">GIT_COMMITTER_NAME</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">'Joe&nbsp;Bloggs'</span><span style="color: rgb(20, 20, 20);">,
+&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">GIT_COMMITTER_EMAIL</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">'joe.bloggs@somewhere.com'</span><span style="color: rgb(20, 20, 20);">,
+&nbsp;&nbsp;</span><span style="color: rgb(150, 122, 178);">//&nbsp;signalling&nbsp;to&nbsp;dugite&nbsp;to&nbsp;use&nbsp;the&nbsp;bundled&nbsp;Git&nbsp;environment
+</span><span style="color: rgb(20, 20, 20);">&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">TEST_ENV</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">'1'</span><span style="color: rgb(20, 20, 20);">,
+&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">HOME</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">''</span><span style="color: rgb(20, 20, 20);">,
+&nbsp;&nbsp;</span><span style="color: rgb(20, 20, 20);">USERPROFILE</span><span style="color: rgb(20, 20, 20);">:&nbsp;</span><span style="color: rgb(189, 22, 107);">''</span><span style="color: rgb(20, 20, 20);">,
+}
+
+</span><span style="color: rgb(20, 20, 20);">process</span><span style="color: rgb(20, 20, 20);">.</span><span style="color: rgb(20, 20, 20);">env</span><span style="color: rgb(20, 20, 20);">&nbsp;=&nbsp;{&nbsp;...</span><span style="color: rgb(20, 20, 20);">process</span><span style="color: rgb(20, 20, 20);">.</span><span style="color: rgb(20, 20, 20);">env</span><span style="color: rgb(20, 20, 20);">,&nbsp;...</span><span style="color: rgb(20, 20, 20);">environmentVariables</span><span style="color: rgb(20, 20, 20);">&nbsp;}
+</span></code></pre></body>
+</html>
